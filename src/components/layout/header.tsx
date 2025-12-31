@@ -98,7 +98,7 @@ export function Header() {
               size="sm"
               className="shadow-lg shadow-accent/20"
             >
-              Demander un Devis
+              Demander un devis
               <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </div>
@@ -170,7 +170,7 @@ export function Header() {
                       className="w-full"
                       size="lg"
                     >
-                      Demander un Devis Gratuit
+                      Demander un devis gratuit
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </div>

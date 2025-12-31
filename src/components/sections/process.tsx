@@ -88,10 +88,10 @@ export function Process() {
             className="inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4 bg-accent/10 px-4 py-2 rounded-lg"
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            Notre Méthode
+            Notre méthode
           </motion.span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Notre Processus en <span className="text-accent">5 Étapes</span>
+            Notre processus en <span className="text-accent">5 étapes</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             De la première rencontre à la remise des clés, nous vous accompagnons
@@ -224,7 +224,7 @@ export function Process() {
               size="lg"
               onClick={scrollToContact}
             >
-              Planifier une Consultation Gratuite
+              Planifier une consultation gratuite
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

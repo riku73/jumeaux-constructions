@@ -82,10 +82,10 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6"
           >
-            Construisons Ensemble
+            Construisons ensemble
             <br />
             <span className="relative">
-              <span className="text-accent">Votre Avenir</span>
+              <span className="text-accent">votre avenir</span>
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -120,7 +120,7 @@ export function Hero() {
               onClick={() => scrollToSection("#contact")}
               className="glow-bordeaux"
             >
-              Demander un Devis Gratuit
+              Demander un devis gratuit
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}>

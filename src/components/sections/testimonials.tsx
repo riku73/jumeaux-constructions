@@ -55,7 +55,7 @@ export function Testimonials() {
             Témoignages
           </motion.span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Ce Que Nos <span className="text-accent">Clients</span> Disent
+            Ce que nos <span className="text-accent">clients</span> disent
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             La satisfaction de nos clients est notre plus grande fierté.
@@ -176,7 +176,7 @@ export function Testimonials() {
               size="lg"
               onClick={scrollToContact}
             >
-              Rejoindre Nos Clients Satisfaits
+              Rejoindre nos clients satisfaits
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

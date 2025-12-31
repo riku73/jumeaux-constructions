@@ -74,7 +74,7 @@ export function Contact() {
             Contact
           </motion.span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Demandez Votre <span className="text-accent">Devis Gratuit</span>
+            Demandez votre <span className="text-accent">devis gratuit</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Remplissez le formulaire ci-dessous et notre équipe vous contactera
@@ -106,7 +106,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground text-xl">
-                      Formulaire de Devis
+                      Formulaire de devis
                     </h3>
                     <p className="text-sm text-muted-foreground">
                       Gratuit et sans engagement

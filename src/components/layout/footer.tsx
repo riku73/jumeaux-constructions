@@ -39,7 +39,7 @@ export function Footer() {
               className="shrink-0"
             >
               <Link href="#contact">
-                Demander un Devis
+                Demander un devis
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

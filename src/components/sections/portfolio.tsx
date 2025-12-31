@@ -17,7 +17,7 @@ import {
 const projects = [
   {
     id: 1,
-    title: "Villa Contemporaine",
+    title: "Villa contemporaine",
     category: "residentiel",
     location: "Luxembourg-Ville",
     year: 2024,
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Immeuble de Bureaux",
+    title: "Immeuble de bureaux",
     category: "commercial",
     location: "Kirchberg",
     year: 2024,
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Centre Logistique",
+    title: "Centre logistique",
     category: "industriel",
     location: "Betembourg",
     year: 2023,
@@ -50,7 +50,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Maison Clé en Main",
+    title: "Maison clé en main",
     category: "residentiel",
     location: "Strassen",
     year: 2024,
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Espace Commercial",
+    title: "Espace commercial",
     category: "commercial",
     location: "Esch-sur-Alzette",
     year: 2023,
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Résidence Moderne",
+    title: "Résidence moderne",
     category: "residentiel",
     location: "Tuntange",
     year: 2024,
@@ -127,7 +127,7 @@ export function Portfolio() {
             Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-display">
-            Nos Réalisations
+            Nos réalisations
           </h2>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto text-lg">
             Découvrez une sélection de nos projets récents à travers tout le
@@ -231,7 +231,7 @@ export function Portfolio() {
             size="lg"
             variant="outline-light"
           >
-            Voir Tous Nos Projets
+            Voir tous nos projets
           </Button>
         </motion.div>
       </div>
@@ -306,7 +306,7 @@ export function Portfolio() {
                       ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  Discuter d&apos;un Projet Similaire
+                  Discuter d&apos;un projet similaire
                 </Button>
               </div>
             </>

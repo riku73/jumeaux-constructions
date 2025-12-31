@@ -98,7 +98,7 @@ export function ServiceArea() {
               Zone d&apos;Intervention
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-display">
-              Nous Couvrons Tout le Luxembourg
+              Nous couvrons tout le Luxembourg
             </h2>
 
             <p className="text-primary-foreground/70 mb-8 text-lg leading-relaxed">

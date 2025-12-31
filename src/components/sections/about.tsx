@@ -122,10 +122,10 @@ export function About() {
               className="inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4 bg-accent/10 px-4 py-2 rounded-lg"
             >
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              À Propos
+              À propos
             </motion.span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              À Propos de <span className="text-accent">Jumeaux</span> Constructions
+              À propos de <span className="text-accent">Jumeaux</span> Constructions
             </h2>
 
             <div className="space-y-4 text-muted-foreground mb-8 text-lg leading-relaxed">
@@ -166,7 +166,7 @@ export function About() {
               size="lg"
               onClick={scrollToContact}
             >
-              Discuter de Votre Projet
+              Discuter de votre projet
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>
@@ -182,7 +182,7 @@ export function About() {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              Nos <span className="text-accent">Valeurs</span>
+              Nos <span className="text-accent">valeurs</span>
             </h3>
           </div>
 

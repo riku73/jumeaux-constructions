@@ -9,16 +9,16 @@ const services = [
   {
     id: "residentiel",
     icon: Home,
-    title: "Construction Résidentielle",
+    title: "Construction résidentielle",
     description:
       "Maisons individuelles, maisons clé en main, extensions et rénovations complètes. Nous réalisons votre projet résidentiel sur mesure.",
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop",
-    features: ["Maisons unifamiliales", "Maisons passives", "Extensions & Rénovations"],
+    features: ["Maisons unifamiliales", "Maisons passives", "Extensions & rénovations"],
   },
   {
     id: "commercial",
     icon: Building2,
-    title: "Construction Commerciale",
+    title: "Construction commerciale",
     description:
       "Bureaux, espaces commerciaux et bâtiments mixtes. Des solutions adaptées à vos besoins professionnels.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
@@ -27,7 +27,7 @@ const services = [
   {
     id: "industriel",
     icon: Factory,
-    title: "Construction Industrielle",
+    title: "Construction industrielle",
     description:
       "Halls industriels, entrepôts et zones de production. Des structures robustes et fonctionnelles.",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop",
@@ -69,10 +69,10 @@ export function Services() {
             className="inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4 bg-accent/10 px-4 py-2 rounded-lg"
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            Nos Expertises
+            Nos expertises
           </motion.span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Nos Services de <span className="text-accent">Construction</span>
+            Nos services de <span className="text-accent">construction</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             De la maison individuelle au complexe industriel, nous mettons notre
@@ -172,7 +172,7 @@ export function Services() {
             <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                  Vous avez un projet en tête?
+                  Vous avez un projet en tête ?
                 </h3>
                 <p className="text-white/70">
                   Discutons ensemble de vos besoins et trouvons la meilleure solution.
@@ -183,7 +183,7 @@ export function Services() {
                 onClick={scrollToContact}
                 className="shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground"
               >
-                Discutons de Votre Projet
+                Discutons de votre projet
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>

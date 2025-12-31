@@ -8,47 +8,47 @@ import { Button } from "@/components/ui/button";
 const differentiators = [
   {
     icon: Shield,
-    title: "Garantie Qualité",
+    title: "Garantie qualité",
     description:
       "Garantie décennale et biennale sur tous nos projets. Votre investissement est protégé.",
   },
   {
     icon: Clock,
-    title: "Délais Respectés",
+    title: "Délais respectés",
     description:
       "Engagement ferme sur les délais. Nous livrons dans les temps convenus, sans exception.",
   },
   {
     icon: Award,
-    title: "Expertise Certifiée",
+    title: "Expertise certifiée",
     description:
       "Certifications ISO 9001 et ISO 14001. Une qualité reconnue et contrôlée.",
   },
   {
     icon: Users,
-    title: "Équipe Locale",
+    title: "Équipe locale",
     description:
       "Une équipe luxembourgeoise expérimentée, proche de vous et de votre projet.",
   },
   {
     icon: Leaf,
-    title: "Construction Durable",
+    title: "Construction durable",
     description:
       "Spécialistes en maisons passives et basse consommation. Construisez pour l'avenir.",
   },
   {
     icon: Wrench,
-    title: "Clé en Main",
+    title: "Clé en main",
     description:
       "De la conception à la livraison, nous gérons tout. Un seul interlocuteur.",
   },
 ];
 
 const stats = [
-  { value: 500, suffix: "+", label: "Projets Réalisés" },
-  { value: 15, suffix: "+", label: "Années d'Expérience" },
-  { value: 98, suffix: "%", label: "Clients Satisfaits" },
-  { value: 50, suffix: "+", label: "Experts Dédiés" },
+  { value: 500, suffix: "+", label: "Projets réalisés" },
+  { value: 15, suffix: "+", label: "Années d'expérience" },
+  { value: 98, suffix: "%", label: "Clients satisfaits" },
+  { value: 50, suffix: "+", label: "Experts dédiés" },
 ];
 
 function AnimatedCounter({
@@ -125,10 +125,10 @@ export function WhyChooseUs() {
             className="inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4 bg-accent/10 px-4 py-2 rounded-lg"
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            Pourquoi Nous
+            Pourquoi nous
           </motion.span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Pourquoi Choisir <span className="text-accent">Jumeaux</span> Constructions?
+            Pourquoi choisir <span className="text-accent">Jumeaux</span> Constructions ?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Une entreprise locale avec des valeurs fortes et un engagement total
@@ -234,7 +234,7 @@ export function WhyChooseUs() {
                 onClick={scrollToContact}
                 className="bg-accent hover:bg-accent/90 text-accent-foreground"
               >
-                Rejoignez nos Clients Satisfaits
+                Rejoignez nos clients satisfaits
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
