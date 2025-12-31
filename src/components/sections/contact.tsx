@@ -98,17 +98,17 @@ export function Contact() {
               <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-accent/30" />
               <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-accent/30" />
 
-              <CardContent className="p-8 md:p-10">
+              <CardContent className="p-5 sm:p-8 md:p-10">
                 {/* Form header */}
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 bg-accent/10 border border-accent/20 rounded-xl flex items-center justify-center">
-                    <MessageSquare className="h-7 w-7 text-accent" />
+                <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-accent/10 border border-accent/20 rounded-xl flex items-center justify-center">
+                    <MessageSquare className="h-6 w-6 sm:h-7 sm:w-7 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground text-xl">
+                    <h3 className="font-bold text-foreground text-lg sm:text-xl">
                       Formulaire de devis
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-xs sm:text-sm text-muted-foreground">
                       Gratuit et sans engagement
                     </p>
                   </div>

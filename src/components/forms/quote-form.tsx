@@ -174,19 +174,19 @@ export function QuoteForm() {
   return (
     <div>
       {/* Progress Bar */}
-      <div className="mb-8">
+      <div className="mb-6 sm:mb-8">
         <div className="flex justify-between mb-2">
           {[1, 2, 3].map((s) => (
             <div
               key={s}
               className={cn(
-                "flex items-center gap-2",
+                "flex items-center gap-1.5 sm:gap-2",
                 s <= step ? "text-accent" : "text-muted-foreground"
               )}
             >
               <div
                 className={cn(
-                  "w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium",
+                  "w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium",
                   s < step
                     ? "bg-accent text-accent-foreground"
                     : s === step
@@ -194,7 +194,7 @@ export function QuoteForm() {
                     : "bg-muted text-muted-foreground"
                 )}
               >
-                {s < step ? <CheckCircle2 className="h-5 w-5" /> : s}
+                {s < step ? <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" /> : s}
               </div>
               <span className="hidden sm:inline text-sm">
                 {s === 1 ? "Type" : s === 2 ? "Détails" : "Contact"}
@@ -225,7 +225,7 @@ export function QuoteForm() {
                 <h3 className="text-lg font-semibold text-foreground mb-4">
                   Quel type de projet avez-vous?
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4">
                   {projectTypes.map((type) => (
                     <button
                       key={type.value}
@@ -237,7 +237,7 @@ export function QuoteForm() {
                         )
                       }
                       className={cn(
-                        "p-6 rounded-xl border-2 text-left transition-all",
+                        "p-3 sm:p-6 rounded-xl border-2 text-left transition-all",
                         projectType === type.value
                           ? "border-accent bg-accent/5"
                           : "border-border hover:border-accent/50"
@@ -245,16 +245,16 @@ export function QuoteForm() {
                     >
                       <type.icon
                         className={cn(
-                          "h-8 w-8 mb-3",
+                          "h-6 w-6 sm:h-8 sm:w-8 mb-2 sm:mb-3",
                           projectType === type.value
                             ? "text-accent"
                             : "text-muted-foreground"
                         )}
                       />
-                      <div className="font-medium text-foreground">
+                      <div className="font-medium text-foreground text-xs sm:text-base">
                         {type.label}
                       </div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-[10px] sm:text-sm text-muted-foreground hidden sm:block">
                         {type.description}
                       </div>
                     </button>

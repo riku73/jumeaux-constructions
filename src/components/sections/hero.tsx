@@ -44,9 +44,9 @@ export function Hero() {
 
       {/* Decorative geometric elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-[2]">
-        {/* Corner accent */}
-        <div className="absolute top-0 left-0 w-32 h-32 border-l-4 border-t-4 border-accent/40" />
-        <div className="absolute bottom-0 right-0 w-32 h-32 border-r-4 border-b-4 border-accent/40" />
+        {/* Corner accent - hidden on mobile */}
+        <div className="absolute top-0 left-0 w-16 h-16 md:w-32 md:h-32 border-l-2 md:border-l-4 border-t-2 md:border-t-4 border-accent/40 hidden sm:block" />
+        <div className="absolute bottom-0 right-0 w-16 h-16 md:w-32 md:h-32 border-r-2 md:border-r-4 border-b-2 md:border-b-4 border-accent/40 hidden sm:block" />
         {/* Vertical accent lines */}
         <div className="absolute top-20 right-20 w-px h-60 bg-gradient-to-b from-accent/60 via-accent/30 to-transparent hidden lg:block" />
         <div className="absolute top-20 right-20 w-24 h-px bg-gradient-to-l from-accent/60 to-transparent hidden lg:block" />
@@ -58,7 +58,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
+      <div className="relative z-10 container mx-auto px-4 pt-24 md:pt-32 pb-16 md:pb-20">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
           <motion.div
@@ -113,7 +113,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 md:mb-20"
           >
             <Button
               size="lg"
@@ -142,14 +142,14 @@ export function Hero() {
             className="relative"
           >
             {/* Stats container with border */}
-            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 md:p-10">
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 lg:p-10">
               {/* Corner accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-accent" />
               <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-accent" />
               <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-accent" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-accent" />
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <div className="grid grid-cols-3 gap-4 md:gap-8">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={index}
@@ -158,13 +158,13 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                     className="flex flex-col items-center text-center group"
                   >
-                    <div className="w-16 h-16 bg-accent/20 border border-accent/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 group-hover:border-accent/50 transition-all duration-300">
-                      <stat.icon className="h-7 w-7 text-accent" />
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-accent/20 border border-accent/30 rounded-lg flex items-center justify-center mb-2 md:mb-4 group-hover:bg-accent/30 group-hover:border-accent/50 transition-all duration-300">
+                      <stat.icon className="h-5 w-5 md:h-7 md:w-7 text-accent" />
                     </div>
-                    <span className="text-4xl font-bold text-white mb-1">
+                    <span className="text-2xl md:text-4xl font-bold text-white mb-1">
                       {stat.value}
                     </span>
-                    <span className="text-white/50 text-sm tracking-wide uppercase">
+                    <span className="text-white/50 text-[10px] md:text-sm tracking-wide uppercase">
                       {stat.label}
                     </span>
                   </motion.div>

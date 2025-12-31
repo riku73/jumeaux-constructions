@@ -106,21 +106,21 @@ export function ServiceArea() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.7538768517693!2d6.014808176822082!3d49.71543514001303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479553e90f77715d%3A0x22e681952a42b97f!2sJumeaux%20Constructions%20SARL!5e0!3m2!1sen!2slu!4v1767198347773!5m2!1sen!2slu"
                 width="100%"
-                height="400"
+                height="300"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full"
+                className="w-full md:h-[400px]"
                 title="Jumeaux Constructions - Location"
               />
 
               {/* Legend overlay */}
-              <div className="absolute bottom-4 left-4 bg-primary/90 backdrop-blur-sm px-4 py-3 rounded-lg border border-white/10 z-10">
-                <div className="flex items-center gap-3 text-sm">
-                  <div className="w-3 h-3 bg-accent rounded-full shadow-lg shadow-accent/50" />
+              <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 bg-primary/90 backdrop-blur-sm px-3 py-2 md:px-4 md:py-3 rounded-lg border border-white/10 z-10">
+                <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm">
+                  <div className="w-2 h-2 md:w-3 md:h-3 bg-accent rounded-full shadow-lg shadow-accent/50" />
                   <span className="text-primary-foreground font-medium">
-                    Jumeaux Constructions - Tuntange
+                    Jumeaux Constructions
                   </span>
                 </div>
               </div>
@@ -134,9 +134,9 @@ export function ServiceArea() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16"
+          className="mt-10 md:mt-16"
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
             {regions.map((region, index) => (
               <motion.div
                 key={index}
@@ -144,36 +144,36 @@ export function ServiceArea() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className={`p-4 rounded-xl border transition-all duration-300 hover:border-accent/40 ${
+                className={`p-3 md:p-4 rounded-xl border transition-all duration-300 hover:border-accent/40 ${
                   region.highlight
                     ? "bg-accent/10 border-accent/30"
                     : "bg-white/5 border-white/10"
                 }`}
               >
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
                   <MapPin
-                    className={`h-4 w-4 shrink-0 ${
+                    className={`h-3 w-3 md:h-4 md:w-4 shrink-0 ${
                       region.highlight ? "text-accent" : "text-primary-foreground/50"
                     }`}
                   />
                   <span
-                    className={`font-semibold text-sm ${
+                    className={`font-semibold text-xs md:text-sm ${
                       region.highlight ? "text-accent" : "text-primary-foreground"
                     }`}
                   >
                     {region.name}
                   </span>
                   {region.highlight && (
-                    <Badge className="text-[10px] bg-accent text-accent-foreground border-0 rounded-full px-2 py-0">
+                    <Badge className="text-[8px] md:text-[10px] bg-accent text-accent-foreground border-0 rounded-full px-1.5 md:px-2 py-0">
                       Siège
                     </Badge>
                   )}
                 </div>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1">
                   {region.communes.map((commune) => (
                     <span
                       key={commune}
-                      className="text-xs text-primary-foreground/60 bg-white/5 px-2 py-1 rounded-md"
+                      className="text-[10px] md:text-xs text-primary-foreground/60 bg-white/5 px-1.5 md:px-2 py-0.5 md:py-1 rounded-md"
                     >
                       {commune}
                     </span>
