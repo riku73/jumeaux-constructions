@@ -27,12 +27,13 @@ export const footerLinks = {
 };
 
 export const contactInfo = {
-  phone: "+352 XX XX XX XX",
+  phone: "+352 26 61 34 23",
+  mobile: "+352 621 622 439",
   email: "contact@jumeaux-constructions.lu",
   address: {
-    street: "Rue de la Construction",
+    street: "2 Rue Ueleschter",
     city: "Tuntange",
-    postalCode: "L-7452",
+    postalCode: "L-7481",
     country: "Luxembourg",
   },
   hours: {
