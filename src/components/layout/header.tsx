@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, Phone, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Menu, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navigationLinks, contactInfo } from "@/data/navigation";
@@ -48,13 +49,15 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="flex items-center">
-              <div className="relative w-11 h-11 bg-accent rounded-xl flex items-center justify-center shadow-lg shadow-accent/20 overflow-hidden group-hover:scale-105 transition-transform">
-                {/* Corner accent */}
-                <div className="absolute top-0 left-0 w-2 h-2 border-l border-t border-white/30" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-white/30" />
-                <span className="text-accent-foreground font-bold text-xl relative z-10">
-                  JC
-                </span>
+              <div className="relative w-12 h-12 group-hover:scale-105 transition-transform">
+                <Image
+                  src="/logo.png"
+                  alt="Jumeaux Constructions"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                  priority
+                />
               </div>
               <div className="ml-3 hidden sm:block">
                 <span className="font-bold text-lg text-white">
@@ -69,7 +72,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navigationLinks.map((link, index) => (
+            {navigationLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
@@ -91,7 +94,7 @@ export function Header() {
               className="flex items-center gap-2 text-sm font-medium text-white/70 hover:text-accent transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
             >
               <Phone className="h-4 w-4" />
-              <span className="hidden xl:inline">{contactInfo.phone}</span>
+              <span className="hidden lg:inline">{contactInfo.phone}</span>
             </a>
             <Button
               onClick={() => scrollToSection("#contact")}
@@ -121,10 +124,14 @@ export function Header() {
                   {/* Mobile Header */}
                   <div className="flex items-center justify-between p-6 border-b border-white/10">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center">
-                        <span className="text-accent-foreground font-bold text-lg">
-                          JC
-                        </span>
+                      <div className="relative w-10 h-10">
+                        <Image
+                          src="/logo.png"
+                          alt="Jumeaux Constructions"
+                          width={40}
+                          height={40}
+                          className="object-contain"
+                        />
                       </div>
                       <div>
                         <span className="font-bold text-white">Jumeaux</span>
@@ -138,7 +145,7 @@ export function Header() {
                   {/* Mobile Navigation Links */}
                   <nav className="flex-1 p-6">
                     <div className="space-y-1">
-                      {navigationLinks.map((link, index) => (
+                      {navigationLinks.map((link) => (
                         <button
                           key={link.href}
                           onClick={() => scrollToSection(link.href)}

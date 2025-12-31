@@ -83,6 +83,7 @@ export function QuoteForm() {
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -123,6 +124,7 @@ export function QuoteForm() {
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
+    setSubmitError(null);
 
     try {
       const response = await fetch("/api/contact", {
@@ -131,11 +133,15 @@ export function QuoteForm() {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         setIsSuccess(true);
+      } else {
+        setSubmitError(result.error || "Une erreur est survenue. Veuillez réessayer.");
       }
     } catch {
-      console.error("Error submitting form");
+      setSubmitError("Erreur de connexion. Veuillez vérifier votre connexion internet.");
     } finally {
       setIsSubmitting(false);
     }
@@ -196,7 +202,7 @@ export function QuoteForm() {
               >
                 {s < step ? <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" /> : s}
               </div>
-              <span className="hidden sm:inline text-sm">
+              <span className="text-[10px] sm:text-sm">
                 {s === 1 ? "Type" : s === 2 ? "Détails" : "Contact"}
               </span>
             </div>
@@ -514,6 +520,12 @@ export function QuoteForm() {
                 <p className="text-destructive text-sm">
                   {errors.gdprConsent.message}
                 </p>
+              )}
+
+              {submitError && (
+                <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 text-destructive text-sm">
+                  {submitError}
+                </div>
               )}
 
               <div className="flex gap-4">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, ArrowRight, Award } from "lucide-react";
 import { footerLinks, contactInfo } from "@/data/navigation";
 import { Separator } from "@/components/ui/separator";
@@ -53,13 +54,14 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4 md:space-y-6 col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 md:gap-3">
-              <div className="relative w-10 h-10 md:w-14 md:h-14 bg-accent rounded-xl flex items-center justify-center shadow-lg shadow-accent/20 overflow-hidden">
-                {/* Corner accent */}
-                <div className="absolute top-0 left-0 w-2 h-2 border-l border-t border-white/30" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-white/30" />
-                <span className="text-accent-foreground font-bold text-lg md:text-2xl relative z-10">
-                  JC
-                </span>
+              <div className="relative w-12 h-12 md:w-14 md:h-14">
+                <Image
+                  src="/logo.png"
+                  alt="Jumeaux Constructions"
+                  width={56}
+                  height={56}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <span className="font-bold text-lg md:text-xl text-white">Jumeaux</span>

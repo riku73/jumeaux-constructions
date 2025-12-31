@@ -16,7 +16,9 @@ export const quoteFormSchema = z.object({
   email: z.string().email("Veuillez entrer une adresse email valide"),
   phone: z.string().min(8, "Veuillez entrer un numéro de téléphone valide"),
   message: z.string().optional(),
-  gdprConsent: z.boolean(),
+  gdprConsent: z.boolean().refine((val) => val === true, {
+    message: "Vous devez accepter la politique de confidentialité pour continuer",
+  }),
 });
 
 export type QuoteFormData = z.infer<typeof quoteFormSchema>;
@@ -26,7 +28,9 @@ export const quickContactSchema = z.object({
   email: z.string().email("Veuillez entrer une adresse email valide"),
   phone: z.string().min(8, "Veuillez entrer un numéro de téléphone valide"),
   message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
-  gdprConsent: z.boolean(),
+  gdprConsent: z.boolean().refine((val) => val === true, {
+    message: "Vous devez accepter la politique de confidentialité pour continuer",
+  }),
 });
 
 export type QuickContactData = z.infer<typeof quickContactSchema>;

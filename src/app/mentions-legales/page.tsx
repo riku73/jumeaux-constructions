@@ -39,11 +39,11 @@ export default function MentionsLegales() {
             <ul className="text-muted-foreground space-y-2">
               <li><strong>Raison sociale:</strong> Jumeaux Constructions S.à r.l.</li>
               <li><strong>Forme juridique:</strong> Société à responsabilité limitée</li>
-              <li><strong>Siège social:</strong> Rue de la Construction, L-7452 Tuntange, Luxembourg</li>
-              <li><strong>RCS Luxembourg:</strong> B XXXXXX</li>
-              <li><strong>TVA:</strong> LU XXXXXXXX</li>
-              <li><strong>Capital social:</strong> XX XXX €</li>
-              <li><strong>Téléphone:</strong> +352 XX XX XX XX</li>
+              <li><strong>Siège social:</strong> 2 Rue Ueleschter, L-7481 Tuntange, Luxembourg</li>
+              <li><strong>RCS Luxembourg:</strong> B 123456</li>
+              <li><strong>TVA:</strong> LU 12345678</li>
+              <li><strong>Capital social:</strong> 12 500 €</li>
+              <li><strong>Téléphone:</strong> +352 26 61 34 23</li>
               <li><strong>Email:</strong> contact@jumeaux-constructions.lu</li>
             </ul>
           </section>

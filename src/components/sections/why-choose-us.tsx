@@ -63,24 +63,30 @@ function AnimatedCounter({
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    let timer: NodeJS.Timeout | null = null;
+    let isMounted = true;
+
     if (isInView) {
       const duration = 2000;
       const steps = 60;
       const increment = value / steps;
       let current = 0;
 
-      const timer = setInterval(() => {
+      timer = setInterval(() => {
         current += increment;
         if (current >= value) {
-          setCount(value);
-          clearInterval(timer);
+          if (isMounted) setCount(value);
+          if (timer) clearInterval(timer);
         } else {
-          setCount(Math.floor(current));
+          if (isMounted) setCount(Math.floor(current));
         }
       }, duration / steps);
-
-      return () => clearInterval(timer);
     }
+
+    return () => {
+      isMounted = false;
+      if (timer) clearInterval(timer);
+    };
   }, [isInView, value]);
 
   return (

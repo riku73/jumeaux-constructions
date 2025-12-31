@@ -1,0 +1,7 @@
+# Robots.txt for Jumeaux Constructions
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://jumeaux-constructions.lu/sitemap.xml
