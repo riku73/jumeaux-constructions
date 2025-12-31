@@ -34,7 +34,7 @@ const projects = [
     year: 2024,
     description:
       "Bâtiment tertiaire de 1500m² avec certification énergétique AAA.",
-    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=2074&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
     surface: "1500m²",
   },
   {
