@@ -46,7 +46,7 @@ export function ServiceArea() {
 
       <div className="container mx-auto px-4 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Map Visual */}
+          {/* Left: Map */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,46 +54,33 @@ export function ServiceArea() {
             transition={{ duration: 0.6 }}
             className="relative order-2 lg:order-1"
           >
-            {/* Map placeholder - Luxembourg shape */}
-            <div className="aspect-square bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-              <div className="h-full relative">
-                {/* Simplified Luxembourg map shape */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full max-w-[300px] max-h-[400px] relative">
-                    {/* Map outline placeholder */}
-                    <svg
-                      viewBox="0 0 100 130"
-                      className="w-full h-full"
-                      fill="none"
-                    >
-                      <path
-                        d="M50 5 L85 20 L90 50 L80 85 L65 100 L50 125 L35 100 L20 85 L10 50 L15 20 Z"
-                        className="fill-white/5 stroke-accent stroke-2"
-                      />
-                      {/* Center point - Tuntange */}
-                      <circle
-                        cx="45"
-                        cy="55"
-                        r="8"
-                        className="fill-accent animate-pulse"
-                      />
-                      {/* Other regions */}
-                      <circle cx="50" cy="30" r="4" className="fill-white/30" />
-                      <circle cx="65" cy="55" r="4" className="fill-white/30" />
-                      <circle cx="50" cy="90" r="4" className="fill-white/30" />
-                      <circle cx="30" cy="60" r="4" className="fill-white/30" />
-                    </svg>
+            {/* Google Maps Embed */}
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10">
+              {/* Corner accents */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-accent/50 z-10" />
+              <div className="absolute top-0 right-0 w-8 h-8 border-r-2 border-t-2 border-accent/50 z-10" />
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-accent/50 z-10" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-accent/50 z-10" />
 
-                    {/* Legend */}
-                    <div className="absolute bottom-0 left-0 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-4 h-4 bg-accent rounded-full shadow-lg shadow-accent/50" />
-                        <span className="text-primary-foreground/80 font-medium">
-                          Siège - Tuntange
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.7538768517693!2d6.014808176822082!3d49.71543514001303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479553e90f77715d%3A0x22e681952a42b97f!2sJumeaux%20Constructions%20SARL!5e0!3m2!1sen!2slu!4v1767198347773!5m2!1sen!2slu"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+                title="Jumeaux Constructions - Location"
+              />
+
+              {/* Legend overlay */}
+              <div className="absolute bottom-4 left-4 bg-primary/90 backdrop-blur-sm px-4 py-3 rounded-lg border border-white/10 z-10">
+                <div className="flex items-center gap-3 text-sm">
+                  <div className="w-3 h-3 bg-accent rounded-full shadow-lg shadow-accent/50" />
+                  <span className="text-primary-foreground font-medium">
+                    Jumeaux Constructions - Tuntange
+                  </span>
                 </div>
               </div>
             </div>
